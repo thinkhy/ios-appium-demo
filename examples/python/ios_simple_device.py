@@ -1,3 +1,4 @@
+# coding=UTF-8（
 """
 Simple iOS tests, showing accessing elements and getting/setting text from them.
 """
@@ -28,24 +29,23 @@ class SimpleIOSTests(unittest.TestCase):
 
 #        app = os.path.abspath('../../apps/HHH/build/Release-iphoneos/HHH.app')
 
-        app = os.path.abspath('/Users/denglibing/Library/Developer/Xcode/DerivedData/Fangduoduo-ggdhbkqeynozvnecriohuprtublh/Build/Products/Release-iphoneos//Fangduoduo_ent.app')
+        app = os.path.abspath('/Users/huangye/work/appium_ios_sample_code/apps/HHH/build/Release-iphoneos/HHH.app')
         self.driver = webdriver.Remote(
             command_executor='http://127.0.0.1:4723/wd/hub',
             desired_capabilities={
-                'app': app,
                 'platformName': 'iOS',
-                'platformVersion': '10.1.1',
-                'deviceName': 'denglibing_i7',
+                'platformVersion': '11.4.1',
+                'deviceName': 'qingqing的 iPhone',
                 'automationName': 'XCUITest',
-                'bundleId': 'ershoufanglzg.fangdd.com',
-                'udid': 'bc7c227a4d06b6794a288459cc0255254d8e7e27',
+                'bundleId': 'com.pluralsight.HHH',
+                'udid': 'eac6faafa72f80e17262f18030b548de97048405',
             })
 
 #    def tearDown(self):
 ##        self.driver.quit()
 
     def test_scroll(self):
-#        self.driver.find_element_by_accessibility_id('button').click()
+        self.driver.find_element_by_accessibility_id('button').click()
 
         sleep(1)
         try:
